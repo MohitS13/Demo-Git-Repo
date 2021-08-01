@@ -1,0 +1,38 @@
+...or create a new repository on the command line
+echo "# ReactJs-Basics" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/MohitS13/ReactJs-Basics.git
+git push -u origin main
+
+
+
+...or push an existing repository from the command line
+
+git remote add origin https://github.com/MohitS13/ReactJs-Basics.git
+git branch -M main
+git push -u origin main
+
+
+React Fragments : we can create wrapper class returning just ( return props.childern; ) rather than <div><div/>
+to wrap around array of components. it will reduce the unnecessory div tags generated in DOM.
+
+we can use <React.Fragment><React.Fragment/> OR shortcut  fragment ( <> </> ) which works the same. fragments won't
+matter while rendering DOM.
+
+React Portals : to write components as we want in return statement but to render at somewhere else than it would
+normally go to.
+
+Implementation -> create <div id="backdrop-root"><div/>  element in index.html where we will create portal.
+import ReactDOM from 'react-dom';
+
+{ ReactDOM.createPortal(<BackDrop  (configuration) /> , document.getElementById('backdrop-root') ) }
+
+Refs (references) : to get access to other dom elements and work with that
+import React ,{ useState, useRef } from 'react-dom';
+
+in fucntional component ->
+const nameInputRef = useRef();
+const nameAgeRef = useRef();
