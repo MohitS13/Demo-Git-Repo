@@ -35,4 +35,17 @@ import React ,{ useState, useRef } from 'react-dom';
 
 in fucntional component ->
 const nameInputRef = useRef();
-const nameAgeRef = useRef();
+const ageInputRef = useRef();
+
+const changedNamedRef = nameInputRef.current.value;
+
+nameInputRef.current.value = '';
+
+<input
+ref={ nameInputRef }
+/>
+
+browser has saperate state for inputs, which is copied to react and controlled by it, using useState.
+are known as controlled components.
+
+in useRef, we directly read and manuipulate values from browser, and hence are known as uncontrolled components.
