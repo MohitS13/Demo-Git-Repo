@@ -49,3 +49,15 @@ browser has saperate state for inputs, which is copied to react and controlled b
 are known as controlled components.
 
 in useRef, we directly read and manuipulate values from browser, and hence are known as uncontrolled components.
+
+Effects: useEffect();
+useEffect(()=>{ },[ ]);
+takes two arguments, one arrow function and other array if dependencies.
+this hook is imported from 'react', it is used to execute code inside it's arrow function only when dependencies
+are changed.
+
+like useState. but for code inside arrow function.
+
+Reducers: 
+
+Context:
