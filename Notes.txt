@@ -58,6 +58,13 @@ are changed.
 
 like useState. but for code inside arrow function.
 
+Debouncing -> 
+
 Reducers: 
+const [state, dispatchfn] = useReducer(reducerFn, initialState, initFn);  
+
+useState -> main state management tool, to manage independent state management, easy to use.
+useReducer -> powerful than useState, used when more than two states are dependent on each other,
+useful for complex state updates. 
 
 Context:
