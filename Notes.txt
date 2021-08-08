@@ -67,4 +67,38 @@ useState -> main state management tool, to manage independent state management, 
 useReducer -> powerful than useState, used when more than two states are dependent on each other,
 useful for complex state updates. 
 
-Context:
+Context(State/Store):React.createContext({
+
+	isLoggedIn:false,
+
+});
+
+
+wrap component with <AuthContext.Provider valur={{ 
+isLoggedIn:false,
+
+}}
+>
+<AuthContext.Provider/>
+
+and con be consumed with
+way 1) 
+<AuthContext.Consumer>
+{(ctx) => { 
+return // conmonent code
+'ctx' can be used as 'props'
+
+}}
+
+
+<AuthContext.Consumer/>
+
+
+way 2)
+
+import { useContext } from 'react'
+
+const ctx = useContext(AuthContext); // now it can be used as normal
+
+
+Dynamic Context -> 
